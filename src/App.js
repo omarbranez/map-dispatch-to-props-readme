@@ -7,6 +7,13 @@ class App extends Component {
   state = {
     todo: ''
   }
+  
+  addTodo = () => {
+    return({
+      type: 'ADD_TODO',
+      todo: this.state.todo
+    })
+  }
 
   handleOnChange = event => {
     this.setState({
